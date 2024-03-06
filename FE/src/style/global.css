@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+  letter-spacing: -1px;
+}
+
+html {
+  height: 100%;
+}
+
+html body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: unset;
+  -moz-osx-font-smoothing: grayscale;
+  /* font-smoothing: antialiased; */
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font: initial;
+  font-size: 16px;
+}
+
+html body #app {
+  width: 100%;
+
+  --header-height: 72px;
+  --header-horizontal-padding: 40px;
+  --footer-height: 150px;
+  --main-content-height: calc(100vh - var(--header-height));
+  --main-content-without-footer-height: calc(100vh - var(--header-height));
+
+  --header-zIndex: 11;
+  --aside-zIndex: 10;
+  --popup-zIndex: 203;
+  --select-option: 10;
+  --popup-zIndex-body: 16;
+}
+
+@media screen and (max-width: 959px) {
+  html,
+  body {
+    font-size: 14px !important;
+  }
+  html body #app {
+    --header-height: 56px;
+    --header-horizontal-padding: 12px;
+    --main-content-height: calc(100vh - var(--header-height));
+    --header-zIndex: 10;
+    --aside-zIndex: 12;
+    --footer-height: 200px;
+    --main-content-padding: 20px;
+  }
+}
+
+.container {
+  padding: 0;
+  max-width: initial;
+  margin: 0;
+}
+
+div.container {
+  padding: 0;
+  max-width: initial;
+  margin: 0;
+}
+
+div.v-application p {
+  margin-bottom: 0;
+}
+
+div.v-application .info {
+  background-color: transparent !important;
+  border: none;
+}
+
+div.v-application {
+  background-color: transparent !important;
+}
+
+div.v-application ol,
+div.v-application ul {
+  padding-left: 0;
+}
+
+div.v-application .headline,
+div.v-application .title {
+  font-size: initial;
+  letter-spacing: initial;
+}
+
+div.v-application button,
+div.v-application input {
+  font-family: "Noto Sans KR";
+}
+
+/* font style */
+a.highlight,
+span.highlight,
+p.highlight {
+  color: #f24b2b !important;
+}
+
+span.bold,
+p.bold {
+  font-weight: 500;
+}
+
+pre {
+  white-space: pre-line;
+}
+
+.two-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* 2줄 말줄임표 추가 */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  height: 42px;
+}
+
+.single-line {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+/* youtube embed iframe responsive ratio */
+.iframe-responsive-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+
+.iframe-responsive-container > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+.hide-scrollbar >>> .v-dialog {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar >>> .v-dialog::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+.main-content-min-height {
+  min-height: var(--main-content-height);
+}
+
+.full-screen {
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+}

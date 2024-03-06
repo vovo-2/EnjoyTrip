@@ -1,0 +1,265 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+canvas,
+details,
+figcaption,
+figure,
+hgroup,
+menu,
+nav,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  font-family: "Noto Sans KR";
+}
+
+header {
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+dl {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: transparent;
+  color: #f24b2b;
+  font-weight: 400;
+}
+
+button {
+  font-family: "Noto Sans KR";
+  outline: 0;
+  padding: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  border: initial;
+  font-family: "Noto Sans KR";
+  font: initial;
+}
+
+div mark {
+  background-color: transparent;
+}
+
+button {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  line-height: normal;
+}
+
+/* 크롬 자동 완성 배경 제거 */
+@-webkit-keyframes autofill {
+  to {
+    color: #666;
+    background: transparent;
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+}
+
+/*
+  vuetify reset
+*/
+
+div.v-application {
+  font-family: "Noto Sans KR";
+}
+
+div.container {
+  padding: 0;
+  max-width: initial;
+  margin: 0;
+}
+
+div.v-application p {
+  margin-bottom: 0;
+}
+
+div.v-application .info {
+  background-color: transparent !important;
+  border: none;
+}
+
+.container {
+  padding: 0;
+  max-width: initial;
+  margin: 0;
+}
+
+div.container {
+  padding: 0;
+  max-width: initial;
+  margin: 0;
+}
+
+div.v-application p {
+  margin-bottom: 0;
+}
+
+div.v-application .info {
+  background-color: transparent !important;
+  border: none;
+}
+
+div.v-application {
+  background-color: transparent;
+}
+
+div.v-application ol,
+div.v-application ul {
+  padding-left: 0;
+}
+
+div.v-application .headline,
+div.v-application .title {
+  font-size: initial;
+  letter-spacing: initial !important;
+}
+
+div.v-application button,
+div.v-application input {
+  font-family: "Noto Sans KR";
+}
+
+.theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+  background-color: transparent;
+}

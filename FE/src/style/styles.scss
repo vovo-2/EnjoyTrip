@@ -1,0 +1,490 @@
+@import './config/_variables.scss';
+@import './global.scss';
+@import './font-guide.scss';
+
+.w-auto {
+  width: auto;
+}
+.w-full {
+  width: 100%;
+}
+.w-sm-full {
+  @media (max-width: $smBreakPoint) {
+    width: 100%;
+  }
+}
+.w-md-full {
+  @media (max-width: $mdBreakPoint) {
+    width: 100%;
+  }
+}
+.w-fit-content {
+  width: fit-content;
+}
+.h-fit-content {
+  height: fit-content;
+}
+.h-full {
+  height: 100%;
+}
+.mw-360 {
+  width: 100%;
+  max-width: 360px;
+  @media (max-width: $smBreakPoint) {
+    max-width: unset;
+  }
+}
+.mw-480 {
+  width: 100%;
+  max-width: 480px;
+  @media (max-width: 480px) {
+    max-width: unset;
+  }
+}
+.mw-640 {
+  max-width: 640px;
+}
+.mw-800 {
+  max-width: 800px;
+}
+.mw-1280 {
+  max-width: 1280px;
+}
+.p-container {
+  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+    &::before,
+    &::after {
+      box-sizing: border-box;
+    }
+  }
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 40px;
+  margin: 0 auto;
+  &.w {
+    max-width: unset;
+    padding: 0;
+  }
+  @media (max-width: $mdBreakPoint) {
+    padding: 0 24px;
+  }
+  @media (max-width: $smBreakPoint) {
+    padding: 0 20px;
+  }
+}
+.py-20 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.hover-underline:hover {
+  text-decoration: underline;
+}
+.main-description {
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  text-align: center;
+  color: $black;
+}
+.d-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-error-message {
+  color: $error;
+  font-size: 12px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.lazy {
+  animation: 1s ease-in-out 0s 1 normal forwards running fadein;
+}
+.bg-white {
+  background-color: $white;
+}
+.bg-dark-green {
+  background-color: $darkGreen;
+  color: $white;
+}
+.grey-box {
+  border: 1px solid $borderColor;
+  border-radius: 4px;
+}
+
+.dark-green--text {
+  color: $darkGreen !important;
+}
+
+.submit-btn__wrapper {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+
+  .v-btn {
+    width: 120px !important;
+    height: 48px !important;
+
+    .v-btn__content {
+      font-size: 1rem;
+    }
+  }
+  .v-btn--disabled {
+    color: $gray5 !important;
+    background-color: $gray2 !important;
+    border: 1px solid $gray2 !important;
+  }
+}
+
+.btn__wrapper {
+  .v-btn--disabled {
+    color: $gray5 !important;
+    background-color: $gray2 !important;
+    border: 1px solid $gray2 !important;
+  }
+}
+
+.border-box,
+.border-box *,
+.border-box *::before,
+.border-box *::after {
+  box-sizing: border-box !important;
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.pos-absolute {
+  position: absolute;
+  z-index: 2;
+}
+
+.pos-fixed {
+  position: fixed;
+  z-index: 2;
+}
+
+.poin-editor-view {
+  h1 {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  h2 {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  h3 {
+    display: block;
+    font-size: 1.17em;
+    font-weight: bold;
+  }
+  h4 {
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+  }
+  h5 {
+    display: block;
+    font-size: 0.83em;
+    font-weight: bold;
+  }
+  h6 {
+    display: block;
+    font-size: 0.67em;
+    font-weight: bold;
+  }
+  blockquote {
+    border-left: 5px solid $darkGreen;
+    background-color: $grey1;
+    margin: 0;
+    padding: 16px 24px;
+  }
+  ul {
+    list-style: disc inside !important;
+  }
+  ol {
+    list-style: decimal inside !important;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    td {
+      border: 1px solid #ececec;
+      padding: 5px 3px;
+    }
+  }
+  img {
+    height: auto !important;
+  }
+}
+
+.v-application .v-application--wrap .poin-editor-view a {
+  color: $blue;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+body.ua-window {
+  /* total width */
+  &::-webkit-scrollbar {
+    background-color: $white;
+    width: 16px;
+  }
+  /* background of the scrollbar except button or resizer */
+  &::-webkit-scrollbar-track {
+    background-color: $white;
+  }
+  &::-webkit-scrollbar-track:hover {
+    background-color: $grey1;
+  }
+  /* scrollbar itself */
+  &::-webkit-scrollbar-thumb {
+    background-color: $grey3;
+    border-radius: 16px;
+    border: 4px solid $white;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #bababa;
+    border: 3px solid $grey1;
+  }
+  /* set button(top and bottom of the scrollbar) */
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+  * {
+    &::-webkit-scrollbar {
+      background-color: $white;
+      width: 16px;
+    }
+    /* background of the scrollbar except button or resizer */
+    &::-webkit-scrollbar-track {
+      background-color: $white;
+    }
+    &::-webkit-scrollbar-track:hover {
+      background-color: $grey1;
+    }
+    /* scrollbar itself */
+    &::-webkit-scrollbar-thumb {
+      background-color: $grey3;
+      border-radius: 16px;
+      border: 4px solid $white;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: #bababa;
+      border: 3px solid $grey1;
+    }
+    /* set button(top and bottom of the scrollbar) */
+    &::-webkit-scrollbar-button {
+      display: none;
+    }
+  }
+  .poin-input {
+    textarea {
+      &::-webkit-scrollbar {
+        background-color: $gray3;
+        width: 8px;
+      }
+      /* background of the scrollbar except button or resizer */
+      &::-webkit-scrollbar-track {
+        background-color: $gray1;
+      }
+      &::-webkit-scrollbar-track:hover {
+        background-color: $white;
+      }
+      /* scrollbar itself */
+      &::-webkit-scrollbar-thumb {
+        background-color: $gray3;
+        border-radius: 16px;
+        border: 1px solid $white;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: $gray5;
+        border: 1px solid $white;
+      }
+      /* set button(top and bottom of the scrollbar) */
+      &::-webkit-scrollbar-button {
+        display: none;
+      }
+    }
+  }
+  // .scrollbar,
+  ::v-deep {
+    .v-data-table__wrapper {
+      &::-webkit-scrollbar {
+        background-color: $white;
+        width: 16px;
+      }
+      /* background of the scrollbar except button or resizer */
+      &::-webkit-scrollbar-track {
+        background-color: $white;
+      }
+      &::-webkit-scrollbar-track:hover {
+        background-color: $grey1;
+      }
+      /* scrollbar itself */
+      &::-webkit-scrollbar-thumb {
+        background-color: $grey3;
+        border-radius: 16px;
+        border: 4px solid $white;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: #bababa;
+        border: 3px solid $grey1;
+      }
+      /* set button(top and bottom of the scrollbar) */
+      &::-webkit-scrollbar-button {
+        display: none;
+      }
+    }
+    .v-dialog {
+      &::-webkit-scrollbar {
+        background-color: $white;
+        width: 16px;
+      }
+      /* background of the scrollbar except button or resizer */
+      &::-webkit-scrollbar-track {
+        background-color: $white;
+      }
+      &::-webkit-scrollbar-track:hover {
+        background-color: $grey1;
+      }
+      /* scrollbar itself */
+      &::-webkit-scrollbar-thumb {
+        background-color: $grey3;
+        border-radius: 16px;
+        border: 4px solid $white;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: #bababa;
+        border: 3px solid $grey1;
+      }
+      /* set button(top and bottom of the scrollbar) */
+      &::-webkit-scrollbar-button {
+        display: none;
+      }
+    }
+  }
+}
+
+.menu-btn {
+  box-shadow: unset;
+  border: 1px solid $gray3;
+  * {
+    box-sizing: border-box;
+  }
+  .v-list-item {
+    min-width: 100px;
+    min-height: 40px;
+    transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+    padding: 0 12px;
+    font-size: 14px;
+    font-weight: 400;
+    color: $black !important;
+    &:hover {
+      cursor: pointer;
+      background-color: $gray1;
+    }
+    &::before {
+      all: unset;
+    }
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.note-statusbar {
+  height: 1px !important;
+  overflow: hidden !important;
+  background-color: $gray3 !important;
+  border: none !important;
+  opacity: 0 !important;
+}
+
+.note-resizebar {
+  height: 1px !important;
+  overflow: hidden !important;
+  background-color: $gray3 !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.count-badge {
+  box-sizing: border-box;
+  position: absolute;
+  min-width: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 16px;
+  line-height: 16px;
+  padding: 0 4px;
+  font-size: 10px;
+  font-weight: bold;
+  background: $coral;
+  color: $white;
+  text-align: center;
+  border-radius: 24px;
+}
+
+.router-view {
+  flex: 1 1 auto;
+}
+
+.admin-view {
+  background-color: $gray1;
+}
+.sticky-bar {
+  position: sticky;
+  position: -webkit-sticky; //safari
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.gap-1 {
+  gap: 4px;
+}
+.gap-2 {
+  gap: 8px;
+}
+.gap-3 {
+  gap: 12px;
+}
+.gap-4 {
+  gap: 16px;
+}
+.gap-5 {
+  gap: 20px;
+}
+.gap-7 {
+  gap: 28px;
+}
+.gap-10 {
+  gap: 40px;
+}
+.gap-15 {
+  gap: 60px;
+}
+.gap-20 {
+  gap: 80px;
+}
+.note-modal-backdrop {
+  z-index: 12 !important;
+}
